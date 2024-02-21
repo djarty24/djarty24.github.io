@@ -1,4 +1,4 @@
-# Astro Starter Kit: Blog
+# 👋 Hey There, I'm Revati.
 
 ```sh
 npm create astro@latest -- --template blog
