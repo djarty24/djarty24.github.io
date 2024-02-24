@@ -11,8 +11,8 @@
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
-	--page-width: 720px;
-	@media (max-width: 800px) { --page-width: 85%; }
+	--page-width: 800px;
+	@media (max-width: 850px) { --page-width: 85%; }
 }
 
 @font-face {
@@ -145,11 +145,12 @@ blockquote {
 hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
+	padding: 1em 0em 1em 0em;
 	width: var(--page-width);
 	margin: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 	body {
 		font-size: 18px;
 	}
