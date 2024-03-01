@@ -10,7 +10,6 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, description, pubDate, updatedDate} = Astro.props;
 ---
 
-<html lang="en">
 	<!-- <head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -37,32 +36,30 @@ const { title, description, pubDate, updatedDate} = Astro.props;
 			}
 			
 		</style> -->
-	</head>
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-                            <h1>{title}</h1>
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on{" "}
-										<FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<hr />
+<body class="bg-gray-900 m-auto w-10/12 sm:w-4/5 md:w-2/3">
+	<Header />
+	<main>
+		<article>
+			<div class="prose">
+				<div class="title">
+					<div class="date">
+                        <h1>{title}</h1>
+						<FormattedDate date={pubDate} />
+						{
+							updatedDate && (
+								<div class="last-updated-on">
+									Last updated on{" "}
+									<FormattedDate date={updatedDate} />
+								</div>
+							)
+						}
 					</div>
-					<slot />
+					<hr />
 				</div>
-			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+				<slot />
+			</div>
+		</article>
+	</main>
+	<Footer />
+</body>
