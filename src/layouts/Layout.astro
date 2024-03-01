@@ -1,4 +1,9 @@
 ---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
 interface Props {
 	title: string;
 }
@@ -13,13 +18,17 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />    
+        <meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
+        <Header />
 		<slot />
+        <Footer />
 	</body>
 </html>

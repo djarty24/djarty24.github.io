@@ -10,9 +10,7 @@ type Props = CollectionEntry<"blog">["data"];
 const { title, description, pubDate, updatedDate} = Astro.props;
 ---
 
-	<!-- <head>
-		<BaseHead title={title} description={description} />
-		<style>
+<!--
 			.prose {
 				width: 100%;
 				max-width: calc(100% - 2em);
@@ -33,23 +31,33 @@ const { title, description, pubDate, updatedDate} = Astro.props;
 
 			.last-updated-on {
 				font-style: italic;
-			}
-			
-		</style> -->
+			}		
+-->
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <BaseHead title={title} description={description} />
+
+    <style>
+        
+
+    </style>
+</head>
 
 <body class="bg-gray-900 m-auto w-10/12 sm:w-4/5 md:w-2/3">
 	<Header />
 	<main>
 		<article>
 			<div class="prose">
-				<div class="title">
-					<div class="date">
-                        <h1>{title}</h1>
+				<div class="title my-6">
+					<div class="date text-gray-400 py-6">
+                        <h1 class="text-gray-200">{title}</h1>
 						<FormattedDate date={pubDate} />
 						{
 							updatedDate && (
 								<div class="last-updated-on">
-									Last updated on{" "}
 									<FormattedDate date={updatedDate} />
 								</div>
 							)
