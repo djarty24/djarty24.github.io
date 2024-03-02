@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
@@ -11,36 +12,20 @@ const posts = (await getCollection('blog')).sort(
 );
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={'Blog | ' + SITE_TITLE} description={SITE_DESCRIPTION} />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<Header />
-		<main class="blog-post">
-            <h1 class="text-gray-200 py-10 pl-5 lg:pt-20 lg:pl-0">Blog</h1>
-			<section>
-				<ul class=" ">
-					{
-						posts.map((post) => (
-							<li class="py-4 my-0">
-								<a href={`/blog/${post.slug}/`} class="lg:flex">
-                                    <p class="text-gray-400 pl-5 lg:m-0 lg:py-5 lg:pr-3 lg:pl-0"><FormattedDate date={post.data.pubDate} /></p>
-                                    <div class="hover:bg-gray-800 rounded-md p-5">
-                                        <h3 class="text-gray-200">{post.data.title}</h3>
-									    <p class="text-gray-400 mb-0">{post.data.description}</p>
-                                    </div>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="Blog">
+    <ul class=" ">
+        {
+            posts.map((post) => (
+                <li class="py-4 my-0">
+                    <a href={`/blog/${post.slug}/`} class="lg:flex">
+                        <p class="text-gray-400 pl-5 lg:m-0 lg:py-5 lg:pr-3 lg:pl-0"><FormattedDate date={post.data.pubDate} /></p>
+                        <div class="hover:bg-gray-800 rounded-md p-5">
+                            <h3 class="text-gray-200">{post.data.title}</h3>
+                            <p class="text-gray-400 mb-0">{post.data.description}</p>
+                        </div>
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
