@@ -4,6 +4,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -13,7 +14,8 @@ const { title, description, pubDate, updatedDate} = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <BaseHead title={title} description={description} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <BaseHead title={title + " | " + SITE_TITLE} description={SITE_DESCRIPTION} />
 </head>
 
 <body>
