@@ -9,51 +9,21 @@ type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate} = Astro.props;
 ---
-
-<!--
-			.prose {
-				width: 100%;
-				max-width: calc(100% - 2em);
-				color: rgb(var(--gray-dark));
-			}
-
-			.title {
-				margin-bottom: 1em;
-				text-align: left;
-				line-height: 1;
-			}
-
-			.date {
-                text-align: left;
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-
-			.last-updated-on {
-				font-style: italic;
-			}		
--->
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <BaseHead title={title} description={description} />
-
-    <style>
-        
-
-    </style>
 </head>
 
-<body class="bg-gray-900 m-auto w-10/12 sm:w-4/5 md:w-2/3">
+<body>
 	<Header />
 	<main>
 		<article>
 			<div class="prose text-gray-300">
 				<div class="title my-6">
 					<div class="date text-gray-400 py-6">
-                        <h1 class="text-gray-200">{title}</h1>
+                        <h1 class="text-gray-200 text-4xl sm:text-5xl">{title}</h1>
 						<FormattedDate date={pubDate} />
 						{
 							updatedDate && (
@@ -62,6 +32,7 @@ const { title, description, pubDate, updatedDate} = Astro.props;
 								</div>
 							)
 						}
+                        
 					</div>
 					<hr />
 				</div>

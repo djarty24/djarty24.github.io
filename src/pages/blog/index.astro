@@ -19,21 +19,21 @@ const posts = (await getCollection('blog')).sort(
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-gray-900 m-auto w-10/12 sm:w-4/5 md:w-2/3">
+	<body>
 		<Header />
 		<main class="blog-post">
-            <h1 class="text-gray-200 text-center py-8">Some of my writing.</h1>
+            <h1 class="text-gray-200 py-10">Blog</h1>
 			<section>
 				<ul class=" ">
 					{
 						posts.map((post) => (
-							<li class="hover:bg-gray-800 py-4 pl-4 my-2 rounded-md">
-								<a href={`/blog/${post.slug}/`}>
-									<!--<img width={720} height={360} src={post.data.heroImage} alt="" />-->
-									<h4 class="title text-gray-200 text-lg">{post.data.title}</h4>
-									<p class="date text-gray-400">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
+							<li class="py-4 my-0">
+								<a href={`/blog/${post.slug}/`} class="lg:flex">
+                                    <p class="text-gray-400 m-0 py-5"><FormattedDate date={post.data.pubDate} /></p>
+                                    <div class="hover:bg-gray-800 rounded-md p-5">
+                                        <h3 class="text-gray-200">{post.data.title}</h3>
+									    <p class="text-gray-400 mb-0">{post.data.description}</p>
+                                    </div>
 								</a>
 							</li>
 						))
