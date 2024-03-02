@@ -1,0 +1,29 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={"404 page not found | " + SITE_TITLE} description={"Could not find the page you're looking for :("} />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <Header />
+    <main class="h-[90vh] flex text-center items-center justify-center">
+        <div>
+            <h1 class="text-gray-200">404</h1>
+            <h1 class="text-gray-400">Whoops! Seems like you're lost!</h1>
+            <h4 class="text-gray-400">Want to go back <span class="text-gray-200 hover:underline"><a href="/">home?</a></span></h4>
+        </div>
+    </main>
+    <Footer />
+  </body>
+</html>
