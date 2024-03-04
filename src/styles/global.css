@@ -13,10 +13,13 @@ body {
     }
 
     @media (min-width: 768px) {
-        width: 66.666667%;
+        width: 65%;
     }
     @media (min-width: 1024px) {
-        width: 45%;
+        width: 70%;
+    }        
+    @media (min-width: 1280px) {
+        width: 50%;
     }        
 }
 
@@ -26,15 +29,19 @@ h1 {
     margin-bottom: 1rem;
     
     @media (min-width: 640px) {
-            font-size: 1.875rem/* 30px */;
-            line-height: 2.25rem/* 36px */;
+        font-size: 1.875rem/* 30px */;
+        line-height: 2.25rem/* 36px */;
     }
 
     @media (min-width: 1024px) {
-        font-size: 2.25rem/* 36px */;
+        font-size: 2rem/* 36px */;
         line-height: 2.5rem/* 40px */;
     }    
 
+    @media (min-width: 1560px) {
+        font-size: 3rem/* 36px */;
+        line-height: 2.5rem/* 40px */;
+    }
 }
 
 h2 {

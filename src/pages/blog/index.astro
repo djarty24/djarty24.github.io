@@ -18,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
             posts.map((post) => (
                 <li class="py-4 my-0">
                     <a href={`/blog/${post.slug}/`} class="lg:flex">
-                        <p class="text-gray-400 pl-5 lg:m-0 lg:py-5 lg:pr-3 lg:pl-0"><FormattedDate date={post.data.pubDate} /></p>
+                        <p class="text-teal-300 pl-5 lg:m-0 lg:py-5 lg:pr-3 lg:pl-0"><FormattedDate date={post.data.pubDate} /></p>
                         <div class="hover:bg-gray-800 rounded-md p-5">
                             <h3 class="text-gray-200">{post.data.title}</h3>
                             <p class="text-gray-400 mb-0">{post.data.description}</p>
