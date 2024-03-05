@@ -129,6 +129,10 @@ p {
     margin-bottom: 1rem;
 }
 
+a {
+    color: #5eead4;
+}
+
 hr {
     --tw-border-opacity: 1;
     border-color: rgb(31 41 55 / var(--tw-border-opacity));

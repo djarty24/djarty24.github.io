@@ -27,10 +27,49 @@ const { title } = Astro.props;
 	</head>
 	<body>
         <Header />
-        <h1 class="text-gray-200 py-10 pl-5 lg:pt-20 lg:pl-0">{title}</h1>
+        <h1 id="page-title" class="text-gray-200 py-10 pl-5 lg:pt-20 lg:pl-0">{title}</h1>
         <div class="text-gray-400">
             <slot />
         </div>
         <Footer />
 	</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            await animateText(document.getElementById('page-title'), 125);
+        });
+
+        function generateRandomCharacter() {
+    		const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
+    		return characters.charAt(Math.floor(Math.random() * characters.length));
+      	}
+
+    	function animateText(element, duration) {
+    	    return new Promise<void>(resolve => {
+    			const originalText = element.textContent;
+        		const length = originalText.length;
+        		let counter = 0;
+        		const interval = setInterval(() => {
+    	      		let newText = '';
+    	      		for (let i = 0; i < length; i++) {
+    	        		if (i <= counter) {
+    	          			newText += originalText.charAt(i);
+    	        		} else {
+    	          			newText += generateRandomCharacter();
+    	        		}
+    	      		}
+    	      	
+    				element.textContent = newText;
+    		      	counter++;
+    		      	if (counter > length) {
+    		        	clearInterval(interval);
+    		        	element.textContent = originalText;
+    		      	}
+    	    	}, duration);
+
+    	        setTimeout(() => {
+    	            resolve();
+    	        }, duration * 10);
+    	    });
+    	}
+    </script>
 </html>

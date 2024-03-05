@@ -24,8 +24,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 		<div class="h-[90vh] flex flex-col justify-center">
 			<h4 id="animate1" class="text-gray-400 m-0">HI THERE, I'M REVATI.</h4>
 			<h1 id="animate2" class="text-gray-200 leading-snug py-4 m-0 opacity-0">
-				I'm a student, designer, and developer with a passion for programming,
-				DIY-ing, and music.
+				I'm a student, designer, and developer with a passion for computers,
+				fixing things, and all sorts of music.
 			</h1>
 			<div id="animate3" class="my-3 flex gap-5 opacity-0 animate-bounce">
 				<a href="#" target="_blank">
@@ -43,7 +43,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 	<Footer />
 	<script>
 		document.addEventListener('DOMContentLoaded', async () => {
-			await animateText(document.getElementById('animate1'), 50),
+			await animateText(document.getElementById('animate1'), 60),
 			await new Promise(resolve => setTimeout(resolve, 800));
 		    await fadeIn(document.getElementById('animate2'), 700);
 			await new Promise(resolve => setTimeout(resolve, 500));

@@ -32,7 +32,8 @@ const posts = (await getCollection('blog')).sort(
 
 <script>
     document.addEventListener('DOMContentLoaded', async () => {
-        await fadeIn(document.getElementById('blog-body'), 500);
+        await new Promise(resolve => setTimeout(resolve, 300));
+        await fadeIn(document.getElementById('blog-body'), 800);
     });
 
     function fadeIn(element, duration) {
