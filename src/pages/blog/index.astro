@@ -13,7 +13,7 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <Layout title="Blog">
-    <ul class=" ">
+    <ul id="blog-body" class="opacity-0">
         {
             posts.map((post) => (
                 <li class="py-4 my-0">
@@ -29,3 +29,24 @@ const posts = (await getCollection('blog')).sort(
         }
     </ul>
 </Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        await fadeIn(document.getElementById('blog-body'), 500);
+    });
+
+    function fadeIn(element, duration) {
+        return new Promise<void>(resolve => {
+            let opacity = 0;
+            const interval = setInterval(() => {
+                opacity += 0.01;
+                element.style.opacity = opacity;
+
+                if (opacity >= 1) {
+                    clearInterval(interval);
+                    resolve();
+                }
+            }, duration / 100);
+        });
+    }
+</script>
