@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://djarty24.github.io/',
+  site: 'https://revati.me',
   integrations: [mdx(), sitemap(), tailwind()]
 });
