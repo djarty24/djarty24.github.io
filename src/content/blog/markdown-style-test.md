@@ -1,8 +1,7 @@
 ---
 title: 'Markdown Style Test'
 description: 'A sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2022'
-heroImage: '/blog-placeholder-1.jpg'
+pubDate: 'Feb 08 2024'
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
