@@ -155,6 +155,7 @@ hr {
         animation-timing-function: cubic-bezier(0,0,0.2,1);
     }
 }
+
 .animate-bounce {
     animation: bounce 1s 5.5;
 }
@@ -185,9 +186,9 @@ hr {
   
     background-size: 250% 250%, 100% 100%;
     transition: background-position 0s ease;
-  }
+}
   
-  .card-shine-effect:hover {
-    background-position: 200%0, 0 0;
-    transition-duration: 1.5s;
-  }
+.card-shine-effect:hover {
+background-position: 200%0, 0 0;
+transition-duration: 1.5s;
+}

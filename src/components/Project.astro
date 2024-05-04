@@ -1,0 +1,18 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+    img: string;
+}
+
+const { href, title, body, img } = Astro.props;
+---
+
+<a href={ href } target="_blank" class="border border-gray-800 hover:border-teal-300 my-8 ease-linear duration-300 overflow-hidden flex flex-col lg:flex-row gap-6 justify-between lg:items-center h-fit bg-gray-800 hover:bg-gray-800 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] rounded-xl bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat p-5 transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] hover:duration-[1500ms]">
+    <img src={ img } alt="" class="lg:w-1/2 h-[100%] object-cover rounded-md">
+    <div class="lg:w-1/2 text-gray-400 flex flex-col justify-center">
+        <h3 class="text-gray-200 text-center lg:text-left">{ title }</h3>
+        <p class="text-center lg:text-left">{ body }</p>
+    </div>
+</a>
