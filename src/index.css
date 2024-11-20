@@ -1,10 +1,18 @@
-@font-face {
-    font-family: 'Pavon';
-    src: local('Pavon'), url('./fonts/Pavon.otf') format('otf');
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@font-face {
+    font-family: 'pavon';
+    src: url('/src/assets/fonts/pavon.otf') format('otf');
+}
+  
+/* @font-face {
+    font-family: 'ghisel';
+    src: url('/src/assets/fonts/custom-font-bold.woff2') format('woff2');
+} */
+  
 :root {
-    font-family: 'Pavon', sans-serif;
     line-height: 1.5;
     font-weight: 400;
 

@@ -4,8 +4,13 @@ export default {
 		"./index.html",
 		"./src/**/*.{js,ts,jsx,tsx}",
 	],
-	theme: {
-		extend: {},
-	},
-	plugins: [],
-}
+    theme: {
+        extend: {
+          fontFamily: {
+            custom: ['pavon', 'serif'],
+            customBold: ['ghisel', 'serif'],
+          },
+        },
+      },
+    plugins: [],
+};
