@@ -7,9 +7,13 @@ export default {
     theme: {
         extend: {
           fontFamily: {
-            custom: ['pavon', 'serif'],
-            customBold: ['ghisel', 'serif'],
+            bold: ['pavon', 'serif'],
+            base: ['romelu-vomelu', 'serif'],
           },
+          colors: {
+            rust: "#FF3D00",
+            ivory: "#FFFCF2",
+          },    
         },
       },
     plugins: [],

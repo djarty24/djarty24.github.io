@@ -7,10 +7,10 @@
     src: url('/src/assets/fonts/pavon.otf') format('opentype');
 }
   
-/* @font-face {
-    font-family: 'ghisel';
-    src: url('/src/assets/fonts/custom-font-bold.woff2') format('woff2');
-} */
+@font-face {
+    font-family: 'romelu-vomelu';
+    src: url('/src/assets/fonts/romelu-vomelu.otf') format('opentype');
+}
   
 :root {
     line-height: 1.5;
