@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'pavon';
-    src: url('/src/assets/fonts/pavon.otf') format('otf');
+    src: url('/src/assets/fonts/pavon.otf') format('opentype');
 }
   
 /* @font-face {

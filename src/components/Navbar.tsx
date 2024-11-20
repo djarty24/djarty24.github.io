@@ -2,7 +2,7 @@
 
 const Navbar = () => {
 	return (
-		<div className="font-custom">Navbar</div>
+		<div className="">Navbar</div>
 	)
 }
 
