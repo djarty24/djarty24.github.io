@@ -77,7 +77,7 @@ const Navbar = () => {
             className={`select-none font-base text-rust flex justify-end items-center fixed top-0 left-0 w-full z-50`}
         >
             <p
-                className="text-right mx-8 lg:my-8 lg:mx-16 leading-none text-2xl sm:text-3xl lg:text-4xl cursor-pointer"
+                className="text-right bg-ivory pt-4 pb-2 px-6 rounded-full mx-8 lg:my-8 lg:mx-16 leading-none text-2xl sm:text-3xl lg:text-4xl cursor-pointer"
                 onClick={toggleMenu}
             >
                 MENU
@@ -92,7 +92,7 @@ const Navbar = () => {
                 <div className="flex-col">
                     <div className="select-none font-base flex justify-end items-center w-full h-[13vh] lg:h-auto">
                         <button
-                            className="text-right mx-8 lg:my-8 lg:mx-16 leading-none text-2xl sm:text-3xl lg:text-4xl cursor-pointer"
+                            className="text-right pt-4 pb-2 px-6 mx-8 lg:my-8 lg:mx-16 leading-none text-2xl sm:text-3xl lg:text-4xl cursor-pointer"
                             onClick={toggleMenu}
                         >
                             CLOSE
