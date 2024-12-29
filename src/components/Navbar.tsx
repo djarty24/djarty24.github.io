@@ -99,7 +99,7 @@ const Navbar = () => {
                             CLOSE
                         </button>
                     </div>
-                    <div className="h-[87vh] p-0 m-0 font-bold flex flex-col gap-2 justify-center lg:justify-normal items-center text-8xl lg:text-9xl">
+                    <div className="h-[87vh] p-0 m-0 font-base flex flex-col gap-10 justify-center lg:justify-normal items-center text-7xl lg:text-8xl">
                         <p
                             className="leading-none p-0 m-0 cursor-pointer"
                             ref={(el) => (linksRef.current[0] = el)}
