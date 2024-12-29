@@ -7,7 +7,7 @@ interface ProjectProps {
 
 const Project = ({ name, link, image, className }: ProjectProps) => {
 	return (
-		<div className={`flex flex-col m-auto my-4 items-center rounded-lg ${className}`}>			
+		<div className={`flex flex-col m-auto my-32 items-center rounded-lg ${className}`}>			
             <a href={link} target="_blank">
                 <img
     				src={image}
