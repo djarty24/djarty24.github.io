@@ -87,7 +87,7 @@ const Home: React.FC = () => {
 	return (
 		<div ref={containerRef} className="select-none">
 			{/* Hero Section */}
-			<div className="h-[85vh] flex items-end fade-section">
+			<div className="h-[87vh] flex items-end fade-section">
 				<p className="font-bold text-rust pl-10 text-7xl sm:text-9xl md:text-[20vw] lg:-my-8 leading-none">Revati Tambe</p>
 			</div>
 
