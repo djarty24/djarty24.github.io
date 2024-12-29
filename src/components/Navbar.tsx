@@ -23,18 +23,18 @@ const Navbar = () => {
                 ease: 'power3.out',
             });
 
-            // Fade in links one by one (faster)
+            // Fade in links one by one
             timeline.fromTo(
                 linksRef.current,
                 { opacity: 0, y: 20 },
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.3, // Faster fade-in
-                    stagger: 0.15, // Shorter stagger time for quicker appearance
+                    duration: 0.3,
+                    stagger: 0.15,
                     ease: 'power3.out',
                 },
-                '-=0.4' // Overlap the fade-in with the menu animation
+                '-=0.4' // Overlap animations
             );
         } else {
             // Fade out links in reverse order
@@ -42,7 +42,7 @@ const Navbar = () => {
                 opacity: 0,
                 y: 20,
                 duration: 0.3,
-                stagger: 0.15, // Reverse stagger for links
+                stagger: 0.15,
                 ease: 'power3.in',
             });
 
@@ -54,7 +54,7 @@ const Navbar = () => {
                     duration: 0.5,
                     ease: 'power3.in',
                 },
-                '-=0.3' // Overlap the fade-out with the menu animation
+                '-=0.3'
             );
         }
     }, [isOpen]);
@@ -74,8 +74,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`select-none font-base text-rust flex justify-end items-center`}
-            style={{ minHeight: '13vh' }}
+            className={`select-none font-base text-rust flex justify-end items-center fixed top-0 left-0 w-full z-50`}
         >
             <p
                 className="text-right mx-8 lg:my-8 lg:mx-16 leading-none text-2xl sm:text-3xl lg:text-4xl cursor-pointer"
@@ -87,7 +86,7 @@ const Navbar = () => {
             {/* Fullscreen Menu */}
             <div
                 ref={menuRef}
-                className="absolute top-0 left-0 w-full h-full bg-rust text-ivory -translate-y-full z-50"
+                className="fixed top-0 left-0 w-full h-full bg-rust text-ivory -translate-y-full z-40"
                 style={{ transform: 'translateY(-100%)' }}
             >
                 <div className="flex-col">
