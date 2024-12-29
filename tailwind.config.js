@@ -13,6 +13,7 @@ export default {
           colors: {
             rust: "#FF3D00",
             ivory: "#FFFCF2",
+            forest: "#1C448E",
           },    
         },
       },
