@@ -63,7 +63,7 @@ const Home: React.FC = () => {
 
 		// Pin the projects section
 		if (projectsPinRef.current && projectsRef.current) {
-			const projectsHeight = projectsRef.current.offsetHeight;
+			const projectsHeight = projectsRef.current.offsetHeight * 2.25;
 
 			gsap.to(projectsPinRef.current, {
 				scrollTrigger: {
@@ -94,7 +94,7 @@ const Home: React.FC = () => {
 
 			{/* About Me Section */}
 			<div ref={aboutMeRef} className="about-me min-h-[100vh] text-rust font-base text-4xl flex flex-col justify-evenly relative overflow-x-hidden">
-				<p className="fade-section ml-auto pr-16 text-right w-1/3">
+				<p className="fade-section ml-auto pr-16 text-right w-2/3 sm:w-1/2 md:w-1/3 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
 					I'M A HIGH SCHOOL STUDENT IN THE BAY AREA.
 				</p>
 				<div
@@ -120,41 +120,44 @@ const Home: React.FC = () => {
 					<img className="w-32 sm:w-44 h-72 sm:h-[40vh] bg-rust object-cover" src="/img/photo-gallery/16.jpg" alt="" />
 					<img className="w-32 sm:w-44 h-72 sm:h-[40vh] bg-rust object-cover" src="/img/photo-gallery/17.jpg" alt="" />
 				</div>
-				<p className="pl-16 w-1/2">
+				<p className="pl-16 w-2/3 md:w-1/2 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
 					YOU CAN FIND ME WRITING CODE, CREATING BEATS, TAKING PHOTOS, BOXING, AND OUT FOR A RUN.
 				</p>
 			</div>
 
 			{/* Projects Section */}
-			<div className="projects w-full flex-col" ref={projectsRef}>
+			<div className="projects w-full flex-col h-fit" ref={projectsRef}>
 				<div className="w-full h-[100vh] flex justify-center items-center relative z-10">
 					<h1
 						ref={projectsPinRef}
-						className="projects-pin font-bold text-center text-[12vw] text-rust relative z-20"
+						className="projects-pin w-fit h-fit font-bold text-center text-[12vw] text-rust relative z-20"
 					>
 						I like making websites
 					</h1>
 				</div>
-				<div className="w-full flex-col relative z-10">
+				<div className="w-full flex-col h-fit relative z-10">
 					<Project
 						className="project"
-						name="Cool Project 1"
-						link="https://example.com"
-						image="https://via.placeholder.com/400x300"
+						name="Multiverse Researchers"
+						link="https://multiverseresearchers.org"
+						image="/img/projects-gallery/1.png"
 					/>
 					<Project
 						className="project"
-						name="Cool Project 2"
-						link="https://example.com"
-						image="https://via.placeholder.com/400x300"
+						name="Bloom Institute Mountain View"
+						link="https://mv.bloominst.org"
+						image="/img/projects-gallery/2.png"
 					/>
 					<Project
 						className="project"
-						name="Cool Project 3"
-						link="https://example.com"
-						image="https://via.placeholder.com/400x300"
+						name="Zeno"
+						link="https://zenoai.co"
+						image="/img/projects-gallery/3.png"
 					/>
 				</div>
+			</div>
+			<div className="w-full h-[200vh]">
+				.
 			</div>
 		</div>
 	);
