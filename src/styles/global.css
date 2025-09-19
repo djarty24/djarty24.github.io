@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('/fonts/instrument-serif-v5-latin-regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('/fonts/eb-garamond-v31-latin-regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --font-serif: 'Instrument Serif', 'serif';
+    --font-sans: 'EB Garamond', 'serif';
+    --color-beige: #f9f7f3;
+    --color-green: #588157;
+    --color-blue: #b8e1f6;
+    --color-pink: #ffdde5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
